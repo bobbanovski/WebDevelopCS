@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Selectors</title>
+	<script src="02-Selectors.js"></script>
+</head>
+<body>
+	<h1>DOM Manipulation - Selectors</h1>
+	<a href="http://www.uq.edu.au">UQ Link</a>
+	<ul>
+		<li id="highlight">List Item 1</li>
+		<li class="bolded">List Item 2</li>
+		<li class="bolded">List Item 3</li>
+	</ul>
+</body>
+</html>
+
+<script type="text/javascript">
+	var tag = document.getElementById("highlight");
+	
+	//Class name
+	var tags = document.getElementsByClassName("bolded");
+	console.log(tags[0]);
+
+	//Tag Name
+	var tagNames = document.getElementsByTagName("li");
+	console.log(tagNames[0]);
+	var headings = document.getElementsByTagName("h1");
+	console.log(headings[0]);
+
+	//query selector - select first Id matching selector
+	var queryId = document.querySelector("#highlight");
+	var queryClass = document.querySelector(".bolded");
+	var querySelect = document.querySelector("h1");
+
+	//select all
+	var selectAll = document.querySelectorAll("li");
+	var selectAllClass = document.querySelectorAll(".bolded");
+</script>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Selectors</title>
+	<script src="02-Selectors.js"></script>
+</head>
+<body>
+	<h1>DOM Manipulation - Selectors</h1>
+	<a href="http://www.uq.edu.au">UQ Link</a>
+	<ul>
+		<li id="highlight">List Item 1</li>
+		<li class="bolded">List Item 2</li>
+		<li class="bolded">List Item 3</li>
+	</ul>
+</body>
+</html>
+
+<script type="text/javascript">
+	var tag = document.getElementById("highlight");
+	//Manipulate
+	tag.style.color = "blue";
+	tag.style.border = "10px solid red";
+	tag.style.fontSize = "70px";
+	tag.style.background = "yellow";
+	tag.style.marginTop = "200px";
+</script>

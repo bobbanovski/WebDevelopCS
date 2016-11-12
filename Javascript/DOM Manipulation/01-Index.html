@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM Manipulation</title>
+	<script src="01-DOMManip.js"></script>
+</head>
+<body>
+	<h1>DOM Manipulation</h1>
+	<a href="http://www.uq.edu.au">UQ Link</a>
+</body>
+</html>
+
+<script type="text/javascript">
+	console.log("linked in htmlFile");
+
+	var body = document.querySelector("body");
+	var isBlue = false;
+	setInterval(function(){
+		if (isBlue){
+			body.style.background = "#696969";
+		} else {
+			body.style.background = "#3498db";
+		}
+		isBlue = !isBlue;
+	}, 1000);
+	
+	var h1 = document.querySelector("h1");
+	h1.style.color = "red";
+</script>

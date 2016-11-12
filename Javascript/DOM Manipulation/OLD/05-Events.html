@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Events</title>
+	
+</head>
+<body>
+	<h1>DOM Manipulation - Events</h1>
+	<a href="http://www.uq.edu.au">UQ Link</a>
+	<ul>
+		<li id="highlight">List Item 1</li>
+		<li class="bolded">List Item 2</li>
+		<li class="bolded">List Item 3</li>
+	</ul>
+	<button>Click Here</button>
+	<p>This is the <strong>Correct</strong> paragraph</p>
+	<img src="purge.jpg">
+	<p id="hover1">Hover over me</p>
+	<p id="hover2">No me</p>
+</body>
+</html>
+
+<script type="text/javascript">
+	//Select element, add event listener
+	var button = document.querySelector("button");
+	var paragraph = document.querySelector("p");
+	
+	// button.addEventListener("click", function(){
+	// 	paragraph.textContent = "Button Clicked";
+	// })
+	//or use function name
+	button.addEventListener("click", changeText);
+	function changeText() {
+		paragraph.textContent = "Button clicked";
+	}
+	
+	var hover1 = document.getElementById('hover1');
+	hover1.addEventListener("mouseover", function() {
+		hover1.textContent = "Well Done";
+	})
+	hover1.addEventListener("mouseout", function(){
+		hover1.textContent = "Mouse Gone";
+	})
+
+	var hover2 = document.getElementById("hover2");
+	hover2.addEventListener("hover", function() {
+		hover2.textContent = "YOu are hovered";
+	})
+</script>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery - Selector</title>
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	<style>
+	.correct {
+		color: green;
+	}
+	.wrong {
+		color: red;
+		background: pink;
+	}
+	.done{
+		color: grey;
+		text-decoration: line-through;
+	}
+	</style>
+</head>
+<body>
+	<h1>jQuery methods</h1>
+
+	<input type="text" placeholder="Name Here">
+
+	<ul>
+		<li>One</li>
+		<li id="two">Two</li>
+		<li>Three</li>
+	</ul>
+	<select>
+		<option>Shiraz</option>
+		<option>Merlot</option>
+		<option>CabSav</option>
+	</select>
+	<br />
+	<br />
+	<img src="Purge.jpg">
+</body>
+</html>
+
+<script type="text/javascript">
+//api documentation
+/////// Text //////////////
+// text return container text and all descendents
+var test = $("h1").text();
+$("h1").text("New Text");
+
+//change all lis at once
+$("li").text("Upgraded Text");
+var html = $('ul').html();
+
+////////// HTML ////////////////
+$("ul").html("<li>New LI for UL</li><li id='newLink'></li>");
+$("#newLink").html("<a href='dogs.com'>DogsCom</a>");
+
+////////// Attr //////////////
+// Get attribute of first element in set of matched elements
+// Set all attributes of matched elements
+var image = $("img").attr("src");
+$("img").attr("src", "Capture.jpg");
+//$("input").attr("type", "color");
+
+////////// Val ///////////
+// Get value from input
+$("input").val("InputValue");
+var value = $("input").val();
+
+
+//Get value from dropdown select
+var select = $("select").val();
+//Get value from checked checkbox
+
+//Set classes
+$("h1").addClass("correct");
+$("h1").removeClass("correct");
+$("li").addClass("wrong");
+$("li").removeClass("wrong");
+$("li").first().toggleClass("done");
+</script>

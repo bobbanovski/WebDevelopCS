@@ -1,0 +1,10 @@
+$("div").css("background", "purple");
+
+$(".highlight").css("width", "200px");
+
+$("#third").css("border", "2px solid orange");
+
+//var first = $("div")[0]
+//first.style.color = "pink";
+$("div:first-of-type").css("color", "pink");
+//$("div:first").css("color", "pink");

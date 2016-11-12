@@ -1,0 +1,14 @@
+img{
+	width: 20%;
+	float: left;
+	margin: 2.5%;
+}
+h1{
+	margin: 2.5%;
+	padding-bottom: 20px;
+	border-bottom-style: solid;
+	border-color: #bfbfbf;
+	border-width: 2px;
+	width: 20%;
+	text-transform: uppercase;
+}
